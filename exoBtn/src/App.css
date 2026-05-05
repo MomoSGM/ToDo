@@ -1,0 +1,156 @@
+.app {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #6e8efb 0%, #a777e3 100%);
+  padding: 40px 20px;
+  box-sizing: border-box;
+  font-family: var(--sans);
+}
+
+.app-header {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 32px;
+}
+
+.app-header h1 {
+  font-size: 42px;
+  margin: 0 0 8px;
+  color: #fff;
+  letter-spacing: -1px;
+}
+
+.app-header p {
+  font-size: 18px;
+  opacity: 0.9;
+  margin: 0;
+}
+
+.app-main {
+  max-width: 560px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Carte qui contient la TodoList */
+.todo-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.todo-card h2 {
+  margin: 0 0 20px;
+  color: #2d2d44;
+  font-size: 24px;
+}
+
+/* Formulaire */
+.todo-form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.todo-form input {
+  flex: 1;
+  padding: 12px 14px;
+  border: 2px solid #e5e7eb;
+  border-radius: 10px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.todo-form input:focus {
+  border-color: #6e8efb;
+}
+
+.todo-form button {
+  padding: 12px 20px;
+  background: #6e8efb;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.todo-form button:hover {
+  background: #5a7af0;
+}
+
+.todo-form button:active {
+  transform: scale(0.97);
+}
+
+/* Liste */
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.todo-empty {
+  text-align: center;
+  color: #9ca3af;
+  font-style: italic;
+  padding: 16px 0;
+}
+
+/* Item */
+.todo-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  background: #f9fafb;
+  border-radius: 10px;
+  transition: background 0.2s;
+}
+
+.todo-item:hover {
+  background: #f3f4f6;
+}
+
+.todo-item input[type='checkbox'] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #6e8efb;
+}
+
+.todo-item .todo-texte {
+  flex: 1;
+  font-size: 16px;
+  color: #1f2937;
+  word-break: break-word;
+}
+
+.todo-item.completed .todo-texte {
+  text-decoration: line-through;
+  color: #9ca3af;
+}
+
+.todo-item .todo-delete {
+  padding: 6px 12px;
+  background: #fee2e2;
+  color: #dc2626;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.todo-item .todo-delete:hover {
+  background: #fecaca;
+}
